@@ -1,0 +1,94 @@
+body{
+    font-family: Verdana;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+.botao{
+    background-color: white;
+    width: 35%;
+    border-radius: 80px;
+    background: linear-gradient(#f0f327, #ffae00e8);
+    box-shadow: 15px 5px 15px rgba(0, 0, 0, 0.3);
+    border: 10px solid #3264B0;
+    transition: transform .2s; 
+    margin: 0 auto;
+}
+
+.botao:active{
+    transform: scale(0.85); /* Botão 'afunda' ao ser pressionado */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra para realçar o clique */
+}
+.pos{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+}
+.pos2{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 70%;
+}
+h4{
+    animation: normal;
+}
+
+.content {
+    margin-top: 2px;
+    transition: opacity 1s ease-in-out; /* Transição suave no opacity */
+    opacity: 1; /* Opacidade total inicialmente */
+}
+
+.hidden {
+    opacity: 0; /* Efeito fade-out quando hidden for aplicado */
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+#pokemon-list {
+    max-height: 600px;
+    overflow-y: auto;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.pokemon-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.pokemon-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.pokemon-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.pokemon-id {
+    font-weight: bold;
+    color: #666;
+}
+
+.pokemon-name {
+    font-size: 18px;
+    text-transform: capitalize;
+}
