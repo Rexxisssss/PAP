@@ -13,8 +13,14 @@ let currentPokemonData = null;
 
 pokedexBtn.addEventListener("click", () => {
   const opening = !pokedexWrapper.classList.contains("open");
+
   pokedexWrapper.classList.toggle("open");
   pokedexWrapper.classList.toggle("closed");
+
+  // Atualiza apenas o texto da <span> dentro do botão
+  const textSpan = pokedexBtn.querySelector("span");
+  textSpan.textContent = opening ? "Fechar Pokédex" : "Abrir Pokédex";
+
   if (opening) pokedexOpenSound.play();
 });
 
