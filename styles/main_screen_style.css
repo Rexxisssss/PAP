@@ -107,7 +107,7 @@ header {
     color: #111827;
     padding: 1rem;
     border-radius: 10px;
-    width: 380px;   /* igual à imagem */
+    width: 370px;   /* igual à imagem */
     height: 300px;  /* igual à imagem */
     box-sizing: border-box; /* garante que padding não aumenta o tamanho total */
     display: flex;
