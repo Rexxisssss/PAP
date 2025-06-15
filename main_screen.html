@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles/main_screen_style.css">
+</head>
+
+<body background="img/bg3.jpeg">
+    <div id="content" class="fade-in">
+        <header>
+            <nav class="nav">
+            <div class="left">
+              <a href="main_screen.html">
+                <img src="img/pokedex.png" class="imagem" alt="Logo">
+              </a>
+            </div>
+
+            <div class="opcoes">
+                <a href="index.html"><img src="img/voltar.png" class="img-nav" alt="Voltar"></a>
+                
+            </div>
+            </nav>
+        </header>
+          <!-- Botão para abrir/fechar -->
+        <button id="pokedex-button">
+           <img src="img/icon.png" alt="" style="width: 24px; vertical-align: middle; margin-right: 10px;">
+          Abrir Pokédex
+        </button>
+
+        <!-- Wrapper da Pokédex -->
+        <div id="pokedex-wrapper" class="closed">
+
+          <!-- Metade de cima (animação de tampa) -->
+          <div id="pokedex-top" class="pokedex-half">
+            <div class="camera-dot"></div>
+            <div class="led-light"></div>
+          </div>
+
+          <!-- Corpo da Pokédex -->
+            <div class="pokedex-body"> <!-- Ecrã da Pokédex -->
+              <section class="pokedex-screen">
+
+                <!--searchbar + filtros+ switch de shiny-->
+                <div class="pokemon-controls">
+                  <div class="search-container">
+                    <input type="text" id="search" placeholder="Procurar nome/ID">
+                  </div>
+                  <div class="filters">
+                    <select id="type-filter">
+                      <option value="all">Todos os tipos</option>
+                      <option value="grass">Grass</option><option value="poison">Poison</option>
+                      <option value="fire">Fire</option><option value="water">Water</option>
+                      <option value="electric">Electric</option><option value="bug">Bug</option>
+                      <option value="normal">Normal</option><option value="flying">Flying</option>
+                      <option value="ground">Ground</option><option value="fairy">Fairy</option>
+                      <option value="fighting">Fighting</option><option value="psychic">Psychic</option>
+                      <option value="rock">Rock</option><option value="ghost">Ghost</option>
+                      <option value="ice">Ice</option><option value="dragon">Dragon</option>
+                    </select>
+                  </div>
+                  <label class="switch" alt="Shiny" >
+                    <input type="checkbox" id="shiny-toggle" alt="Shiny">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                <div id="pokemon-card" class="pokemon-card">
+                  <div class="pokemon-details">
+                    <div class="pokemon-image">
+                      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pokemon" id="pokemon-image">
+                    </div>
+
+                    <div class="pokemon-info">
+                      <h2 id="pokemon-name">Pikachu</h2>
+                      <p><strong>ID:</strong> <span id="pokemon-id">25</span></p>
+                      <p><strong>Type:</strong> <span id="pokemon-types">Electric</span></p>
+                      <p><strong>Abilities:</strong> <span id="pokemon-abilities">Static, Lightning Rod</span></p>
+                      <p><strong>Height:</strong> <span id="pokemon-height">0.4m</span></p>
+                      <p><strong>Weight:</strong> <span id="pokemon-weight">6kg</span></p>
+                    </div>
+                  </div>
+
+                  <section class="pokemon-stats">
+                      <h3>Stats</h3>
+                      <ul id="pokemon-stats">
+                        <li>HP: 35</li>
+                        <li>Attack: 55</li>
+                        <li>Defense: 40</li>
+                        <li>Speed: 90</li>
+                      </ul>
+                    </section>
+                  
+                </div>
+              </section>
+
+              <div id="pokemon-list"></div>
+
+            </div>
+
+          <!-- Metade de baixo -->
+          <div id="pokedex-bottom" class="pokedex-half">
+            <div class="bottom-buttons">
+              <div class="button red"></div>
+              <div class="button blue"></div>
+            </div>
+          </div>
+        </div>
+
+    <audio id="pokedex-open-sound" src="pokedex-open.mp3" preload="auto"></audio>
+    <audio id="select-sound" src="select.mp3" preload="auto"></audio>
+
+    <script src="scripts/main_screen_script.js"></script>
+    <script src="scripts/pokedex.js"></script>
+</body>
+</html>
